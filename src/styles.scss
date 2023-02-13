@@ -1,1 +1,154 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/bootstrap';
+@import 'bootstrap/variables';
+@import 'bootstrap/mixins';
+
+$font-primary: 'Poppins', Arial, sans-serif;
+$primary: #1089ff;
+
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+}
+
+.toolbar img {
+    margin: 0 16px;
+}
+
+.toolbar #twitter-logo {
+    height: 40px;
+    margin: 0 8px;
+}
+
+.toolbar #youtube-logo {
+    height: 40px;
+    margin: 0 16px;
+}
+
+.toolbar #twitter-logo:hover,
+.toolbar #youtube-logo:hover {
+    opacity: 0.8;
+}
+
+body {
+    font-family: $font-primary;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: normal;
+    background: #f8f9fd;
+    color: lighten($black, 50%);
+}
+
+a {
+    transition: .3s all ease;
+    color: $primary;
+
+    &:hover,
+    &:focus {
+        text-decoration: none !important;
+        outline: none !important;
+        box-shadow: none;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+    line-height: 1.5;
+    font-weight: 400;
+    font-family: $font-primary;
+    color: $black;
+}
+
+.bg-primary {
+    background: $primary !important;
+}
+
+.ftco-section {
+    padding: 7em 0;
+}
+
+.ftco-no-pt {
+    padding-top: 0;
+}
+
+.ftco-no-pb {
+    padding-bottom: 0;
+}
+
+//HEADING SECTION
+.heading-section {
+    font-size: 28px;
+    color: $black;
+}
+
+//COVER BG
+.img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.table-wrap {
+    @include media-breakpoint-down(xl) {
+        overflow-x: scroll;
+    }
+}
+
+.table {
+    min-width: 1000px !important;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+
+    thead {
+        th {
+            border: none;
+            padding: 30px;
+            font-size: 14px;
+            color: $white;
+        }
+
+        tr {}
+    }
+
+    tbody {
+        tr {
+            margin-bottom: 10px;
+            -webkit-box-shadow: 0px 5px 12px -12px rgba(0, 0, 0, 0.29);
+            -moz-box-shadow: 0px 5px 12px -12px rgba(0, 0, 0, 0.29);
+            box-shadow: 0px 5px 12px -12px rgba(0, 0, 0, 0.29);
+        }
+
+        th,
+        td {
+            border: none;
+            padding: 10px;
+            font-size: 14px;
+            background: $white;
+        }
+
+        td {
+            .close {
+                span {
+                    font-size: 12px;
+                    color: $danger;
+                }
+            }
+        }
+    }
+}
